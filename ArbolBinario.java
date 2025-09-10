@@ -2,7 +2,7 @@ package actividad4;
 class ArbolBinario {
     Nodo raiz;
 
-    // Insertar un empleado
+   
     public void insertar(Empleado empleado) {
         raiz = insertarRec(raiz, empleado);
     }
@@ -35,7 +35,7 @@ class ArbolBinario {
         }
     }
 
-    // Eliminar empleado
+    
     public void eliminar(int id) {
         raiz = eliminarRec(raiz, id);
     }
@@ -56,7 +56,7 @@ class ArbolBinario {
             if (actual.izquierdo == null) return actual.derecho;
             if (actual.derecho == null) return actual.izquierdo;
 
-            // Caso 3: dos hijos
+            
             Nodo sucesor = encontrarMin(actual.derecho);
             actual.empleado = sucesor.empleado;
             actual.derecho = eliminarRec(actual.derecho, sucesor.empleado.id);
@@ -71,7 +71,7 @@ class ArbolBinario {
         return nodo;
     }
 
-    // Recorrido inorden (muestra todos en orden)
+   
     public void inorden() {
         inordenRec(raiz);
     }
