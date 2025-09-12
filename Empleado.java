@@ -1,5 +1,3 @@
-package actividad4;
-
 class Empleado {
     int id;
     String nombre;
