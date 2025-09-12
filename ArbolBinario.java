@@ -1,8 +1,7 @@
-package actividad4;
 class ArbolBinario {
     Nodo raiz;
 
-   
+    
     public void insertar(Empleado empleado) {
         raiz = insertarRec(raiz, empleado);
     }
@@ -48,11 +47,11 @@ class ArbolBinario {
         } else if (id > actual.empleado.id) {
             actual.derecho = eliminarRec(actual.derecho, id);
         } else {
-            // Caso 1: sin hijos
+            
             if (actual.izquierdo == null && actual.derecho == null) {
                 return null;
             }
-            // Caso 2: un hijo
+
             if (actual.izquierdo == null) return actual.derecho;
             if (actual.derecho == null) return actual.izquierdo;
 
@@ -71,7 +70,6 @@ class ArbolBinario {
         return nodo;
     }
 
-   
     public void inorden() {
         inordenRec(raiz);
     }
