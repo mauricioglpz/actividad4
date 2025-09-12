@@ -1,5 +1,3 @@
-package actividad4;
-
 import java.util.Scanner;
 
 public class Main {
@@ -14,18 +12,17 @@ public class Main {
             "Antonio", "Josefina", "Ernesto", "Santiago", "Lalo", "Frida",
         };
 
-        // Insertar automáticamente 1000 empleados
+        
         for (int i = 1; i <= 1000; i++) {
             String nombre = nombres[(i - 1) % nombres.length];
             arbol.insertar(new Empleado(i, nombre));
         }
 
-        System.out.println("=== sistema de gestión de Empleados ===");
         int opcion;
         int nextId = 1001; 
 
         do {
-            System.out.println("\nMenú:");
+            System.out.println("===sistema de gestión de Empleados ===");
             System.out.println("1. buscar empleado por ID");
             System.out.println("2. insertar nuevo empleado");
             System.out.println("3. eliminar empleado por ID");
@@ -80,3 +77,6 @@ public class Main {
         sc.close();
     }
 }
+
+
+
