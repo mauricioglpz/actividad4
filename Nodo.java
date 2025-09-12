@@ -1,5 +1,4 @@
-package actividad4;
-class Nodo {
+public class Nodo {
     Empleado empleado;
     Nodo izquierdo, derecho;
 
